@@ -125,16 +125,8 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11488104, guid: 413b898f8ea574bc9a500f6c4471374a, type: 2}
-      propertyPath: depth
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 11419224, guid: 413b898f8ea574bc9a500f6c4471374a, type: 2}
-      propertyPath: speed.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11488104, guid: 413b898f8ea574bc9a500f6c4471374a, type: 2}
       propertyPath: density
-      value: 0.7
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 413b898f8ea574bc9a500f6c4471374a, type: 2}
