@@ -23,7 +23,7 @@ public class ScenarioUnit : MonoBehaviour {
 		GameObject go = (GameObject) Instantiate (prefabs[idx], new Vector3(x, Random.value, z), new Quaternion());
 		go.transform.SetParent (this.transform, false);
 		go.AddComponent<Rotater>();
-		float size = Random.value;
+		float size = Random.value * 0.7f;
 		float gs = Random.value;
 		go.transform.localScale = new Vector3 (size, size, size);
 		Material material = go.GetComponentInChildren<Renderer>().material;
