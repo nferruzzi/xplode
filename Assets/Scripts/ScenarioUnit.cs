@@ -20,9 +20,9 @@ public class ScenarioUnit : MonoBehaviour {
 
 	void Inst (int x, int z) {
 		int idx = (int)Mathf.Round (Random.Range (0, prefabs.Length));
-		GameObject prefab = prefabs[idx];
-		GameObject go = (GameObject) Instantiate (prefab, new Vector3(x, Random.value, z), new Quaternion());
+		GameObject go = (GameObject) Instantiate (prefabs[idx], new Vector3(x, Random.value, z), new Quaternion());
 		go.transform.SetParent (this.transform, false);
+		go.AddComponent<Rotater>();
 		float size = Random.value;
 		float gs = Random.value;
 		go.transform.localScale = new Vector3 (size, size, size);
