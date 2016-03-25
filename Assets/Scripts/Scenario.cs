@@ -4,6 +4,7 @@ using System.Collections;
 
 public class Scenario : MonoBehaviour {
 	public GameObject scenario;
+	public Vector3 speed;
 
 	private GameObject prev;
 	private GameObject current;
@@ -14,6 +15,8 @@ public class Scenario : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ScenarioUnit g = scenario.GetComponent<ScenarioUnit> ();
+		Scroller s = scenario.GetComponent<Scroller> ();
+		s.speed = speed;
 		unit_depth = 2 * g.depth + 1;
 		Physics.IgnoreLayerCollision (8, 8);
 		prev = Inst (new Vector3(0, 0, -unit_depth));
@@ -23,6 +26,7 @@ public class Scenario : MonoBehaviour {
 
 	GameObject Inst (Vector3 position) {
 		GameObject go = (GameObject)Instantiate (scenario, position, new Quaternion ());
+		go.transform.SetParent (this.transform, false);
 		return go;
 	}
 	

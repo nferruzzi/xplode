@@ -46,7 +46,7 @@ MonoBehaviour:
   - {fileID: 136130, guid: 1b39c070665c14e8382019941e837935, type: 2}
   width: 10
   depth: 20
-  density: 0.05
+  density: 0.02
 --- !u!114 &11498532
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7119c813e374ee3b7e0dcb2fbf9e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: 0, z: -5}
+  speed: {x: 0, y: 0, z: -3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
