@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ScenarioUnit : MonoBehaviour {
-	public GameObject prefab;
+	public GameObject[] prefabs;
 	public int width;
 	public int depth;
 	public float density;
@@ -19,12 +19,14 @@ public class ScenarioUnit : MonoBehaviour {
 	}
 
 	void Inst (int x, int z) {
-		GameObject go = (GameObject) Instantiate (prefab, new Vector3(x, Random.value * 2, z), new Quaternion());
+		int idx = (int)Mathf.Round (Random.Range (0, prefabs.Length));
+		GameObject prefab = prefabs[idx];
+		GameObject go = (GameObject) Instantiate (prefab, new Vector3(x, Random.value, z), new Quaternion());
 		go.transform.SetParent (this.transform, false);
 		float size = Random.value;
 		float gs = Random.value;
 		go.transform.localScale = new Vector3 (size, size, size);
-		Material material = go.GetComponent<Renderer>().material;
+		Material material = go.GetComponentInChildren<Renderer>().material;
 		material.color = new Color(gs, gs, gs);
 	}
 	

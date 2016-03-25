@@ -74,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5859385, y: 0.2839377, z: -15.49037}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493350}
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117474}
   m_LocalRotation: {x: 0.5735765, y: 0, z: 0, w: 0.819152}
-  m_LocalPosition: {x: 5.5859385, y: 10.283937, z: -25.49037}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493350}
@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5859385, y: -0.2839377, z: 15.49037}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 449738}
@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 127980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5859385, y: 0.2839377, z: -15.49037}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493350}
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7119c813e374ee3b7e0dcb2fbf9e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: 0, z: -1}
+  speed: {x: 0, y: 0, z: -5}
 --- !u!114 &11447916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,10 +201,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9759a226d0024005a3f4707008acfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 150750, guid: 405ea65d08e2440cc9f61443080aa2c9, type: 2}
+  prefabs:
+  - {fileID: 163020, guid: ca6bb2858b9c842cea64413cd5ea388a, type: 2}
+  - {fileID: 196934, guid: 553ff1f0cda4f4a838140bb1b2f72956, type: 2}
   width: 10
-  depth: 10
-  density: 0.15
+  depth: 20
+  density: 0.07
 --- !u!124 &12428452
 Behaviour:
   m_ObjectHideFlags: 1
