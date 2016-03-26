@@ -8,6 +8,20 @@ public interface IWeaponInterface
 	void FireUp ();
 }
 
+public interface IProjectileInterface
+{
+	float damage {
+		get;
+		set;
+	}
+
+	GameObject gameObject {
+		get;
+	}
+
+	void ShowExplosionAt (Vector3 point, Vector3 normal);
+}
+
 public class WeaponController : MonoBehaviour {
 
 	List<IWeaponInterface> currentWeapons;

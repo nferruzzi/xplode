@@ -1,15 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Proiettile : MonoBehaviour {
+public class Proiettile : MonoBehaviour, IProjectileInterface {
 
-	// Use this for initialization
+	float projectileDamage;
+
 	void Start () {
-		Destroy (gameObject, 5.0f);
+		Destroy (gameObject, 3.0f);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void Update () {	
 	}
+
+	public float damage {
+		get {
+			return projectileDamage;
+		}
+
+		set {
+			projectileDamage = value;
+		}
+	}
+
+	public void ShowExplosionAt (Vector3 point, Vector3 normal) {
+	}
+
+	void OnCollisionEnter(Collision collision) {
+		Destroy (gameObject);
+	}
+		
 }
