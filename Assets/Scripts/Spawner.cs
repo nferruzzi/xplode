@@ -1,21 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[ExecuteInEditMode]
 public class Spawner : MonoBehaviour {
 
 	public float gameLevel = 5.0f;
+	public float sideSubdivision = 5.0f;
+	Vector3 bl, br, tl, tr;
 
-	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		CalcFrustumPlane ();
 	}
 
-	void OnDrawGizmos() {
+	void CalcFrustumPlane () {
 		Camera ca = Camera.main;
 
 		Ray bottomLeftRay = ca.ViewportPointToRay(new Vector3(0, 0, 0));
@@ -31,25 +28,35 @@ public class Spawner : MonoBehaviour {
 		float topRightDistance;
 
 		if (pl.Raycast (bottomLeftRay, out bottomLeftDistance)) {
-			Vector3 bl = bottomLeftRay.GetPoint(bottomLeftDistance);
+			bl = bottomLeftRay.GetPoint(bottomLeftDistance);
 
 			if (pl.Raycast (topLeftRay, out topLeftDistance)) {
-				Vector3 tl = topLeftRay.GetPoint(topLeftDistance);
+				tl = topLeftRay.GetPoint(topLeftDistance);
 
 				if (pl.Raycast (bottomRightRay, out bottomRightDistance)) {
-					Vector3 br = bottomRightRay.GetPoint(bottomRightDistance);
+					br = bottomRightRay.GetPoint(bottomRightDistance);
 
 					if (pl.Raycast (topRightRay, out topRightDistance)) {
-						Vector3 tr = topRightRay.GetPoint(topRightDistance);
-
-						Gizmos.color = Color.green;
-						Gizmos.DrawLine (bl, br);
-						Gizmos.DrawLine (br, tr);
-						Gizmos.DrawLine (tr, tl);
-						Gizmos.DrawLine (tl, bl);
+						tr = topRightRay.GetPoint(topRightDistance);
 					}
 				}
 			}
 		}
 	}
+
+	void Update () {	
+	}
+
+	void OnGUI() {
+		CalcFrustumPlane ();
+	}
+
+	void OnDrawGizmos() {
+		Gizmos.color = Color.green;
+		Gizmos.DrawLine (bl, br);
+		Gizmos.DrawLine (br, tr);
+		Gizmos.DrawLine (tr, tl);
+		Gizmos.DrawLine (tl, bl);
+	}
+
 }
