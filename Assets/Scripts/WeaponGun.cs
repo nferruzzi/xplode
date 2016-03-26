@@ -29,7 +29,11 @@ public class WeaponGun : MonoBehaviour, IWeaponInterface {
 		for (int i = 0; i < bulletsPerFire; ++i) {
 			Vector3 pos = parent.transform.position + offset;
 			pos += parent.transform.right * (i - (float)(bulletsPerFire -1) / 2.0f) * sideSpacing;
+
 			GameObject p = Instantiate (proiettile, pos, Quaternion.identity) as GameObject;
+			IProjectileInterface pi = p.GetComponent<IProjectileInterface> ();
+			pi.damage = damage;
+
 			Rigidbody r = p.GetComponent<Rigidbody> ();
 			r.velocity = transform.forward * velocity;
 		}
@@ -47,6 +51,5 @@ public class WeaponGun : MonoBehaviour, IWeaponInterface {
 	public void FireUp() {
 		CancelInvoke ("Fire");
 		firing = false;
-	}
-		
+	}		
 }
