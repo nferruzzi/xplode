@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2366586}
   - 54: {fileID: 5486350}
   - 114: {fileID: 11455274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Proiettile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
