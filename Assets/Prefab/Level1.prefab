@@ -43,6 +43,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493350}
+  - 114: {fileID: 11499004}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -233,6 +234,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenario: {fileID: 116682, guid: f5293466161d44cf6ae13fb3248472ed, type: 2}
   speed: {x: 0, y: 0, z: -5}
+--- !u!114 &11499004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7218e74e8832c482594cdf19d94c1847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameLevel: 5
 --- !u!124 &12428452
 Behaviour:
   m_ObjectHideFlags: 1
