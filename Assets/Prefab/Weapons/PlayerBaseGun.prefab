@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 417084}
   - 114: {fileID: 11449446}
   m_Layer: 0
-  m_Name: WeaponGun
+  m_Name: PlayerBaseGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,6 +39,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c04c190781f74200a0276bae67b8bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proiettile: {fileID: 156838, guid: 01e829bdf41a14d11b7ded671211c728, type: 2}
+  totalBullets: -1
+  bulletsPerFire: 2
+  sideSpacing: 0.25
+  velocity: 15
+  fireRateSec: 20
+  damage: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
