@@ -44,6 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 493350}
   - 114: {fileID: 11499004}
+  - 114: {fileID: 11480142}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Level
@@ -234,6 +235,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenario: {fileID: 116682, guid: f5293466161d44cf6ae13fb3248472ed, type: 2}
   speed: {x: 0, y: 0, z: -5}
+--- !u!114 &11480142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d07d522a507b4ab28692333bddeebad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStart: 2
+  timeEnd: 100
+  spawningFrequency: 3
+  spawnableEnemies:
+  - enemey: {fileID: 153706, guid: 1a824c05dbb264e03b6455869adad00f, type: 2}
+    minPerSpawn: 2
+    maxPerSpawn: 3
+    delay: 1
 --- !u!114 &11499004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,27 +269,25 @@ MonoBehaviour:
   sideSubdivision: 6
   spawnPointMargin: 2
   spawnLocationsTop:
-  - {x: -4.460937, y: 5, z: 19.505161}
-  - {x: -2.973958, y: 5, z: 19.505161}
-  - {x: -1.4869789, y: 5, z: 19.505161}
+  - {x: -2.967214, y: 5, z: 19.505161}
+  - {x: -1.483607, y: 5, z: 19.505161}
   - {x: 0, y: 5, z: 19.505161}
-  - {x: 1.4869791, y: 5, z: 19.505161}
-  - {x: 2.9739583, y: 5, z: 19.505161}
-  - {x: 4.460937, y: 5, z: 19.505161}
+  - {x: 1.4836073, y: 5, z: 19.505161}
+  - {x: 2.9672146, y: 5, z: 19.505161}
   spawnLocationsLeft:
-  - {x: -6.3288045, y: 5, z: 14.952168}
-  - {x: -6.196672, y: 5, z: 12.399176}
-  - {x: -6.0645394, y: 5, z: 9.846184}
-  - {x: -5.9324074, y: 5, z: 7.293191}
-  - {x: -5.800275, y: 5, z: 4.740198}
-  - {x: -5.6681423, y: 5, z: 2.187206}
+  - {x: -6.3189883, y: 5, z: 14.952168}
+  - {x: -6.1871552, y: 5, z: 12.399176}
+  - {x: -6.0553226, y: 5, z: 9.846184}
+  - {x: -5.9234896, y: 5, z: 7.293191}
+  - {x: -5.7916565, y: 5, z: 4.740198}
+  - {x: -5.6598234, y: 5, z: 2.187206}
   spawnLocationsRight:
-  - {x: 6.3288045, y: 5, z: 14.952168}
-  - {x: 6.196672, y: 5, z: 12.399176}
-  - {x: 6.0645394, y: 5, z: 9.846184}
-  - {x: 5.9324074, y: 5, z: 7.293191}
-  - {x: 5.800275, y: 5, z: 4.740198}
-  - {x: 5.6681423, y: 5, z: 2.187206}
+  - {x: 6.3189883, y: 5, z: 14.952168}
+  - {x: 6.1871552, y: 5, z: 12.399176}
+  - {x: 6.0553226, y: 5, z: 9.846184}
+  - {x: 5.9234896, y: 5, z: 7.293191}
+  - {x: 5.7916565, y: 5, z: 4.740198}
+  - {x: 5.6598234, y: 5, z: 2.187206}
   nBoundaryUp: {x: 0, y: 0, z: 1}
   nBoundaryLef: {x: -1, y: 0, z: 0}
   nBoundaryRight: {x: 1, y: 0, z: 0}
