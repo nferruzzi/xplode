@@ -57,9 +57,6 @@ public class Spawner : MonoBehaviour {
 	}
 
 	void CalcSpawningPoints() {
-//		Vector3 lbl = new Vector3(), lbr = new Vector3(), ltl = new Vector3(), ltr = new Vector3();
-//		CalcFrustumPlane (gameYLevel - 10.0f, ref lbl, ref lbr, ref ltr, ref ltl);
-
 		float sud = 1.0f / sideSubdivision;
 
 		Vector3 up = (tr + tl) * 0.5f;
@@ -71,7 +68,7 @@ public class Spawner : MonoBehaviour {
 		nBoundaryRight = (right - center).normalized;
 
 		spawnLocationsTop = new List<Vector3> ();
-		for (float t = 0.0f; t <= 1.0f; t += sud) {
+		for (float t = sud; t < 1.0f; t += sud) {
 			Vector3 point = Vector3.Lerp (tl, tr, t);
 			point += nBoundaryUp * spawnPointMargin;
 			spawnLocationsTop.Add (point);
