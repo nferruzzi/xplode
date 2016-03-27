@@ -8,14 +8,16 @@ public class Enemy1Logic : MonoBehaviour {
 	private float firingInterval;
 	private float tLastFire;
 
+	private Rigidbody rb;
+
 	// Use this for initialization
 	void Start () {
 		tLastFire = Time.time;
+		rb = GetComponent<Rigidbody>();
+	}
 
-		GameObject player = GameObject.FindGameObjectWithTag ("Player");
-
-		// Rotate the enemy towards the player
-		transform.LookAt(player.transform);
+	void accelera(Vector3 direction, float v) {
+		rb.AddForce (direction * v);
 	}
 
 	void Spara() {
@@ -34,6 +36,23 @@ public class Enemy1Logic : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+
+		// Rotate the enemy towards the player
+		// TODO: give it a max angular velocity
+		transform.LookAt(player.transform);
+
+		if (Time.time < 2) {
+			accelera (transform.forward, 2);
+		} else if (Time.time > 2 & Time.time < 4) {
+			accelera (transform.forward, -2);
+		} else if (Time.time > 6) {
+			accelera (transform.right, 1);
+		} else if (Time.time > 10) {
+			Destroy (this.gameObject);
+		}
+
 		if ((Time.time - tLastFire) > firingInterval) {
 			Spara ();
 
