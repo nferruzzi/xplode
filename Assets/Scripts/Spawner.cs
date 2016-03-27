@@ -15,10 +15,15 @@ public class Spawner : MonoBehaviour {
 
 	Vector3 bl, br, tl, tr;
 
+	public static Spawner GetInstance() {
+		GameObject go = GameObject.FindGameObjectWithTag ("Level");
+		return go.GetComponentInChildren<Spawner> ();
+	}
+
 	void Start () {
 		CalcAll ();
 	}
-
+		
 	void CalcAll() {
 		CalcFrustumPlane (gameYLevel, ref bl, ref br, ref tr, ref tl);
 		CalcSpawningPoints ();
