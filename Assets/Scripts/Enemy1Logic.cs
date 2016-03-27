@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Enemy1Logic : MonoBehaviour {
 
-	public GameObject proiettile;
+	public GameObject bullet;
 
 	private float firingInterval;
 	private float tLastFire;
@@ -21,8 +21,8 @@ public class Enemy1Logic : MonoBehaviour {
 	}
 
 	void Spara() {
-		GameObject b1 = (GameObject)Instantiate (proiettile, transform.position + (transform.forward + transform.right), new Quaternion());
-		GameObject b2 = (GameObject)Instantiate (proiettile, transform.position + (transform.forward - transform.right), new Quaternion());
+		GameObject b1 = (GameObject)Instantiate (bullet, transform.position + (transform.forward + transform.right), new Quaternion());
+		GameObject b2 = (GameObject)Instantiate (bullet, transform.position + (transform.forward - transform.right), new Quaternion());
 		Rigidbody rb1 = b1.GetComponent<Rigidbody> ();
 		Rigidbody rb2 = b2.GetComponent<Rigidbody> ();
 
