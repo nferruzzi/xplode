@@ -2,14 +2,23 @@
 basic project for Unity 5.x workshops.
 For more informations contact me `@ilwoody`
 
+### Abstract
+xplode is a classic endless vertical shooter created to demonstrate the power of Unity3D as a fast prototyping tool; no previous knowledge in game programming is required.
+
 #### Live link
 
 http://nferruzzi.github.io/xplode/Builds/webgl/
 
-### Abstract
-xplode is a classic endless vertical shooter created to demonstrate the power of Unity3D as a fast prototyping tool; no previous knowledges in game programming are required.
+#### Credits
+
+- Nicola Ferruzzi
+- Lorenzo Berni
+- Ivan Nikolaev
+- Iacopo Marmorini
+- Elise Cicognani
 
 ### Main goal
+
 the goal of the workshop is building a game from scratch to become familiar with the following concepts:
 
 #### 1st day
