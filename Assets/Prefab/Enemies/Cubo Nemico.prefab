@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2374546}
   - 114: {fileID: 11484696}
   - 114: {fileID: 11470408}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cubo Nemico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,12 +88,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c04c190781f74200a0276bae67b8bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proiettile: {fileID: 156838, guid: 01e829bdf41a14d11b7ded671211c728, type: 2}
+  proiettile: {fileID: 120540, guid: b96eed0032a774b65be885f03b0f23d1, type: 2}
   totalBullets: -1
   bulletsPerFire: 1
   sideSpacing: 0.5
-  velocity: 5
-  fireRateSec: 3
+  velocity: 10
+  fireRateSec: 0.3
   damage: 1
 --- !u!114 &11484696
 MonoBehaviour:
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energy: 10
+  fireAfterMin: 0.1
+  fireAfterMax: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

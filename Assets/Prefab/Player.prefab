@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3347868}
   - 23: {fileID: 2391734}
   - 95: {fileID: 9564798}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: player_ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,9 @@ GameObject:
   - 114: {fileID: 11470486}
   - 114: {fileID: 11437602}
   - 114: {fileID: 11458920}
-  m_Layer: 0
+  - 54: {fileID: 5451792}
+  - 136: {fileID: 13680910}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -94,6 +96,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143748}
   m_Mesh: {fileID: 4300000, guid: 742fd99cbad124b68b1527efa3858831, type: 3}
+--- !u!54 &5451792
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166944}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!95 &9564798
 Animator:
   serializedVersion: 3
@@ -134,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1e63a68b9af4c0e9e6450d727b61d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energy: 10
 --- !u!114 &11470486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +164,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSpeed: 0.03
+--- !u!136 &13680910
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
