@@ -16,15 +16,14 @@ the goal of the workshop is building a game from scratch to become familiar with
 1. Prefabs and assets management
 1. Creations and destruction of objects at runtime
 1. Inspector and serialization of custom class
-1. User gizmos to draw information on screen
+1. Use of gizmos to draw information on screen
 
 #### 2nd day
 1. Collisions and rigid bodies
 1. C# interfaces
 1. Invoke, InvokeRepeating and coroutines
-1. Unity editor scripts and custom UI with gizmos
-1. Scene serialization of custom class
-1. User UI and scene management
+1. Unity editor scripts
+1. Game UI and scene management
 
 ### The architecture of an endless shooter
 
