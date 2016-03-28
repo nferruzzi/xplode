@@ -29,7 +29,6 @@ public class WeaponController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {	
-		Physics.IgnoreLayerCollision (8, 8);
 		currentWeapons = new List<IWeaponInterface>();
 		currentWeapons.Add (GetWeaponInterfaceFromGameObject(mainGun));
 	}
