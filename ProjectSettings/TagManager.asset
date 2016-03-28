@@ -14,10 +14,10 @@ TagManager:
   - UI
   - 
   - 
-  - Projectiles Player
-  - Projectiles Enemies
-  - 
-  - 
+  - Bullets Player
+  - Bullets Enemies
+  - Player
+  - Enemies
   - 
   - 
   - 
