@@ -2,6 +2,10 @@
 basic project for Unity 5.x workshops.
 For more informations contact me `@ilwoody`
 
+#### Live link
+
+http://nferruzzi.github.io/xplode/Builds/webgl/
+
 ### Abstract
 xplode is a classic endless vertical shooter created to demonstrate the power of Unity3D as a fast prototyping tool; no previous knowledges in game programming are required.
 
