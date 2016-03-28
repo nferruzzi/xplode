@@ -35,6 +35,9 @@ public class BaseEnemy : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		Proiettile pro = collision.gameObject.GetComponentInChildren<Proiettile> ();
+		if (pro == null)
+			return;
+		
 		energy -= pro.damage;
 
 		foreach (ContactPoint contact in collision.contacts) {

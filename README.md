@@ -43,8 +43,9 @@ See `BaseEnemy.cs` and Prefab `Cubo Nemico`.
 
 1. create a GameObject and call it as you wish
 1. set the Layer to "Enemies"
-1. add a Mesh and Collider
-1. add a `WeaponGun` component if it fires from a single weapon or a `WeaponController` if it has more than one
+1. add Mesh, Collider, RigidBody
+1. tweak your RigidBody properties (e. fix Y)
+1. add `WeaponGun` component if it fires from a single weapon or `WeaponController` if it has more than one
 1. on its Start method, get a spawning location from the `Spawner` instance.
 1. schedule it's behaviour according to your own logic
 1. add method `OnCollisionEnter`
@@ -52,6 +53,7 @@ See `BaseEnemy.cs` and Prefab `Cubo Nemico`.
 ```Unity3D
 void OnCollisionEnter(Collision collision) {
   Proiettile pro = collision.gameObject.GetComponentInChildren<Proiettile> ();
+  if (pro == null) return;
   energy -= pro.damage;
 
   foreach (ContactPoint contact in collision.contacts) {
